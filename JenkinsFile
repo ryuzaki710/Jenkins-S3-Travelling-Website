@@ -5,7 +5,7 @@ node {
   
     stage('Upload to S3') {
         sh '''
-        aws s3 cp . s3://travel-website-jenkins/Demofolder/ --recursive
+        aws s3 cp . ${s3-bucket-travel-website} --recursive
         '''
     }
 }
